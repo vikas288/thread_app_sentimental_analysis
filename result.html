@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+
+    <p><strong>Positive Reviews:</strong> {{ positive }}</p>
+    <p><strong>Neutral Reviews:</strong> {{ neutral }}</p>
+    <p><strong>Negative Reviews:</strong> {{ negative }}</p>
+
+    <h2>Rating Distribution</h2>
+    <img src="data:image/png;base64,{{ plot_url1 }}" alt="Rating Distribution">
+
+    <h2>Sentiment Distribution</h2>
+    <img src="data:image/png;base64,{{ plot_url2 }}" alt="Sentiment Distribution">
+
+    <h2>Word Cloud</h2>
+    <img src="data:image/png;base64,{{ plot_url3 }}" alt="Word Cloud">
+
+    <h2>Sentiment Distribution Over Time</h2>
+    <img src="data:image/png;base64,{{ plot_url4 }}" alt="Sentiment Distribution Over Time">
+
+</body>
+</html>
